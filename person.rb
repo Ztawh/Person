@@ -1,19 +1,8 @@
 class Person
+	attr_reader :name, :age, :gender
+	
 	def initialize(name = "Amanda")
-		
 		@name = name
-	end
-
-	def name
-		@name
-	end
-
-	def age
-		@age
-	end
-
-	def gender
-		@gender
 	end
 
 	def set_name(name)
@@ -31,7 +20,7 @@ class Person
 	end
 
 	def set_gender(gender)
-		if gender == ":female" || gender == ":male"
+		if gender == :female || gender == :male
 			@gender = gender
 		end
 		gender = nil
