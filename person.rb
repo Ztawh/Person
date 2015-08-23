@@ -17,23 +17,23 @@ class Person
 	end
 
 	def set_name(name)
-		unless name == ""
+		if name.is_a?(Integer)
 			name = nil
 		end
 		@name = name
 	end
 
 	def set_age(age)
-		unless age == Integer
-			age = nil
+		if age.is_a?(Integer)
+			@age = age
 		end
-		@age = age
+		age = nil
 	end
 
 	def set_gender(gender)
-		if gender != "female" && gender != "male"
-			gender = nil
+		if gender == ":female" || gender == ":male"
+			@gender = gender
 		end
-		@gender = gender
+		gender = nil
 	end
 end
